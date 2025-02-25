@@ -1,29 +1,10 @@
 name: Deploy to EC2
 
 on:
-  workflow_dispatch
-  # push:
-  #   branches:
-  #     - main
-  # workflow_dispatch:
-  #   inputs:
-  #     STAGE:
-  #       description: "Stage"
-  #       default: "staging"
-  #       required: true
-  #       type: choice
-  #       options:
-  #         - staging
-  #         - staging2
-  #         - staging3
-  #         - qa
-  #         - qa2
-  #         - qa3
-  #
-  #     BRANCH:
-  #       description: "Project branch"
-  #       default: "main"
-  #       required: true
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 env:
   AWS_REGION: ap-southeast-2 # Change this to your AWS region
